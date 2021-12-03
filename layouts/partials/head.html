@@ -37,7 +37,7 @@
 
   <!-- CSS -->
   {{ $templateStyle := resources.Get "css/style.css" }}
-  {{ $style := $templateStyle  | resources.ExecuteAsTemplate "css/main.css" . | resources.Minify | resources.Fingerprint "md5"}}
+  {{ $style := $templateStyle  | resources.ExecuteAsTemplate "css/main.css" . | resources.Minify | resources.Fingerprint "sha384"}}
   <link
     rel="stylesheet"
     href="{{ $style.RelPermalink }}"
@@ -52,7 +52,7 @@
       href="https://fonts.googleapis.com/css?family=Tajawal:300,500,700&display=swap&subset=arabic"
     />
     {{ $templateStyle := resources.Get "css/style.rtl.css" }}
-    {{ $style := $templateStyle  | resources.ExecuteAsTemplate "css/main.rtl.css" . | resources.Minify | resources.Fingerprint "md5"}}
+    {{ $style := $templateStyle  | resources.ExecuteAsTemplate "css/main.rtl.css" . | resources.Minify | resources.Fingerprint "sha384"}}
     <link
       rel="stylesheet"
       href="{{ $style.RelPermalink }}"
@@ -62,7 +62,7 @@
     />
 
   {{ end }}
-  {{ $markupHighlightStyle := resources.Get "css/markupHighlight.css" | resources.Minify | resources.Fingerprint "md5"}}
+  {{ $markupHighlightStyle := resources.Get "css/markupHighlight.css" | resources.Minify | resources.Fingerprint "sha384"}}
   <link
     rel="stylesheet"
     href="{{ $markupHighlightStyle.RelPermalink }}"
@@ -89,7 +89,7 @@
     crossorigin="anonymous"
   />
   {{ if .Params.redirectUrl }}
-    {{ $style := resources.Get "css/spinner.css" | resources.Minify | resources.Fingerprint "md5"}}
+    {{ $style := resources.Get "css/spinner.css" | resources.Minify | resources.Fingerprint "sha384"}}
     <link
       rel="stylesheet"
       href="{{ $style.RelPermalink }}"
@@ -128,7 +128,7 @@
 
   <!-- JavaScript -->
   {{ $anatoleHeader := resources.Get "js/anatole-header.js" }}
-  {{ $secureHeaderJS := $anatoleHeader |  resources.Minify | resources.Fingerprint "md5"}}
+  {{ $secureHeaderJS := $anatoleHeader |  resources.Minify | resources.Fingerprint "sha384"}}
   <script
     type="text/javascript"
     src="{{ $secureHeaderJS.RelPermalink }}"
@@ -138,7 +138,7 @@
 
   {{ if not .Site.Params.disableThemeSwitcher }}
     {{ $anatoleThemeSwitcher := resources.Get "js/anatole-theme-switcher.js" }}
-    {{ $secureThemeSwitcherJS := $anatoleThemeSwitcher |  resources.Minify | resources.Fingerprint "md5"}}
+    {{ $secureThemeSwitcherJS := $anatoleThemeSwitcher |  resources.Minify | resources.Fingerprint "sha384"}}
     <script
       type="text/javascript"
       src="{{ $secureThemeSwitcherJS.RelPermalink }}"
