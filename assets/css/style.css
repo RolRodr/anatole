@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 :root {
-  --bg-color: #fff;
+  --bg-color: #f4f1ed;
   --secondary-bg-color: #eeeeee;
-  --heading-color: #464646;
+  --heading-color: #575656;
   --body-color: rgba(0, 0, 0, 0.7);
   --post-color: rgba(0, 0, 0, 0.44);
   --border-color: rgba(0, 0, 0, 0.15);
@@ -25,7 +25,7 @@
   --content-width: calc(var(--content-ratio) * 100%);
   --sidebar-width: calc(var(--sidebar-ratio) * 100%);
   /* prettier-ignore */
-  --content-ratio: {{ .Site.Params.contentratio | default 0.6 }}
+  --content-ratio: {{ .Site.Params.contentratio | default 0.8 }}
 }
 
 html[data-theme='dark'] {
@@ -435,8 +435,8 @@ Language Switch
 }
 
 .sidebar .logo-title .title img {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 
