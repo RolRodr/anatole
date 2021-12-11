@@ -466,11 +466,11 @@ Language Switch
 }
     
 .display_switch{
-  -webkit-animation-duration: 1.5s;
-  -moz-animation-duration: 1.5s;
-  -ms-animation-duration: 1.5s;
-  -o-animation-duration: 1.5s;
-  animation-duration: 1.5s;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
   background-color: #c7c5c5;
   padding: 0px 0.5rem;
   margin: 0px;
